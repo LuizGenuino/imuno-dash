@@ -1,26 +1,39 @@
+<script>
+import DashboardOverview from '@/components/DashboardOverview.vue';
+import HeaderApp from '@/components/HeaderApp.vue';
+import LoteTable from '@/components/LoteTable.vue';
+import TopVacinas from '@/components/TopVacinas.vue';
+
+
+
+
+
+export default {
+    name: "Home",
+    components: {
+        HeaderApp,
+        DashboardOverview,
+        TopVacinas,
+        LoteTable
+    },
+
+    data() {
+        return {
+
+        }
+    }
+}
+
+</script>
+
 <template>
     <div>
         <HeaderApp />
-        <CardVacinasDisponiveis />
+        <h1 class="text-center text-2xl font-bold mt-8">Unidade Basica de Saude</h1>
+        <DashboardOverview />
+        <div class="flex flex-col md:flex-row">
+            <TopVacinas />
+            <LoteTable />
+        </div>
     </div>
 </template>
-
-<script>
-import CardVacinasDisponiveis from '@/components/CardVacinasDisponiveis.vue';
-import HeaderApp from '@/components/HeaderApp.vue';
-
-export default {
-    name: "Relatorios",
-    components: {
-        CardVacinasDisponiveis,
-        HeaderApp
-    },
-    data() {
-
-
-        return {}
-    }
-}
-</script>
-
-<style lang="scss" scoped></style>
